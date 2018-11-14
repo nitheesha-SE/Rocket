@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'rocket',
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'veera';
+export class AppComponent  implements OnInit, OnDestroy{
+  ngOnDestroy(): void {
+
+  }
+  ngOnInit(): void {
+
+  }
 }
