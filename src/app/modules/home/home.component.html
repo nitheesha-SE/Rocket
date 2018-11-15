@@ -1,19 +1,14 @@
 <div class="page-header page-header-light">
   <div class="page-header-content header-elements-md-inline">
     <div class="page-title d-flex justify-content-between">
-      <h4>
-        <i class="icon-arrow-left52 mr-2"></i>
-      </h4>
-      <h4><span class="text-center left-auto">Complete your order</span></h4>
+      <h4></h4>
+      <h4><span class="text-center left-auto">My CX727</span></h4>
       <h4></h4>
     </div>
   </div>
 </div>
 
 <div>
-  <h6 class="pt-4 pb-2 text-center">
-    My CX727
-  </h6>
   <img src="/assets/images/car1.png" class="img-fluid" />
   <h1 class="p-4 text-center mb-0 font-weight-bold">
     Personalize your CX727
@@ -23,10 +18,10 @@
   <div class="card mb-2">
     <div class="card-header">
       <h6 class="card-title">
-        <a class="collapsed">
+        <a class="collapsed"  >
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="p1">
-            <label class="custom-control-label" for="p1">
+            <label class="custom-control-label" for="p1" (click)="trigger('connect_devices');">
               Connect your smart devices
             </label>
           </div>

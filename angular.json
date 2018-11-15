@@ -33,6 +33,7 @@
               "src/css/components.css",
               "src/css/colors.css",
               "src/assets/icons/icomoon/styles.css",
+              "node_modules/ngx-ui-switch/ui-switch.component.css",
               "src/styles.scss"
             ],
             "scripts": []
