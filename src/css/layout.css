@@ -154,7 +154,7 @@ body {
  *
  * ---------------------------------------------------------------------------- */
 .page-title {
-  padding: 2rem 0;
+  padding: 1rem 0;
   position: relative; }
   .page-title small {
     display: inline-block;
@@ -181,6 +181,7 @@ body {
 .page-header-light {
   background-color: #fff;
   border-bottom: 1px solid #ddd; }
+  .page-header-light.has-cover { }
 
 .page-header-dark {
   background-color: #273246;
@@ -1066,3 +1067,32 @@ body {
  *  Styles for main structure of content area in boxed layout
  *
  * ---------------------------------------------------------------------------- */
+.layout-boxed-bg {}
+
+.layout-boxed {
+  box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.15), 4px 2px 4px rgba(0, 0, 0, 0.15); }
+  @media (min-width: 992px) {
+    .layout-boxed,
+    .layout-boxed > .navbar {
+      width: 992px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (min-width: 1200px) {
+    .layout-boxed,
+    .layout-boxed > .navbar {
+      width: 1200px; } }
+  .layout-boxed .page-content {
+    background-color: #f5f5f5; }
+
+@media (min-width: 992px) {
+  .content-boxed:not(.navbar-collapse) {
+    margin-left: 6%;
+    margin-right: 6%; }
+  .navbar > .content-boxed > *:first-child {
+    margin-left: 6%; }
+  .navbar > .content-boxed > *:last-child {
+    margin-right: 6%; }
+  .breadcrumb-line > .content-boxed > *:first-child {
+    margin-left: 1.25rem; }
+  .breadcrumb-line > .content-boxed > *:last-child {
+    margin-right: 1.25rem; } }

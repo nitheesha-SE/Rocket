@@ -27,11 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/css/bootstrap.min.css",
-              "src/css/bootstrap_limitless.min.css",
-              "src/css/layout.min.css",
-              "src/css/components.min.css",
-              "src/css/colors.min.css",
+              "src/css/bootstrap.css",
+              "src/css/bootstrap_limitless.css",
+              "src/css/layout.css",
+              "src/css/components.css",
+              "src/css/colors.css",
               "src/assets/icons/icomoon/styles.css",
               "src/styles.scss"
             ],
