@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'sync-devices',
-  templateUrl: './sync_devices.component.html',
-  styleUrls: ['./sync_devices.component.scss']
+  selector: 'voice_audio',
+  templateUrl: './voice_audio.component.html',
+  styleUrls: ['./voice_audio.component.scss']
 })
-export class SyncDevicesComponent implements OnInit, OnDestroy {
+export class VoiceAudioComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router) {
   }

@@ -9,6 +9,8 @@ import { FooterComponent } from './modules/footers/footer.component';
 import { HomeComponent } from './modules/home/home.component';
 import { SyncDevicesComponent } from './modules/sync_devices/sync_devices.component';
 import { UiSwitchModule } from 'ngx-ui-switch';
+import { ConnectAppComponent } from './modules/connect_apps/connect_app.component';
+import { VoiceAudioComponent } from './modules/voice_audio/voice_audio.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { UiSwitchModule } from 'ngx-ui-switch';
     FooterComponent,
     OrderCompleteComponent,
     HomeComponent,
-    SyncDevicesComponent
+    SyncDevicesComponent,
+    ConnectAppComponent,
+    VoiceAudioComponent
   ],
   imports: [
     BrowserModule,

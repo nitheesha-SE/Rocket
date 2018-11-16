@@ -10,7 +10,7 @@
 
 <div>
   <h1 class="p-4 text-center mb-0 font-weight-bold">
-    Sync Device
+    Sync Apps
   </h1>
 </div>
 <div class="content ">
@@ -24,16 +24,44 @@
             </a>
           </div>
           <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">iPhone XS Max</h3>
+            <h3 class="font-weight-semibold mb-0">Spotify</h3>
             <span class="text-muted">
-              <ui-switch [(ngModel)]="syncIPhone" (change)="onChange($event)"></ui-switch>
+              <ui-switch  (change)="onChange($event)"></ui-switch>
             </span>
           </div>
+        </div>
+        <div class="collapse  text-center mt-2" [ngClass]="{'show': show}">
+          <div class="form-group mb-1">
+            <input type="text" class="form-control" placeholder="username">
+          </div>
+          <div class="form-group mb-0">
+            <input type="text" class="form-control" placeholder="password">
+          </div>
+
+          <div class="d-flex justify-content-between mt-3">
+            <label class="mt-1">
+              Import playlist and lorem ipsum.
+            </label>
+            <ui-switch></ui-switch>
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <label class="mt-1">
+              Import playlist and lorem ipsum.
+            </label>
+            <ui-switch></ui-switch>
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <label class="mt-1">
+              Import playlist and lorem ipsum.
+            </label>
+            <ui-switch></ui-switch>
+          </div>
+
         </div>
       </div>
     </div>
     <div class="col-xl-3 col-md-6">
-      <div class="card card-body mb-0 border-bottom-0">
+      <div class="card card-body">
         <div class="media">
           <div class="mr-3">
             <a href="#">
@@ -41,16 +69,17 @@
             </a>
           </div>
           <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Calendar</h3>
+            <h3 class="font-weight-semibold mb-0">Alexa</h3>
             <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
+              <ui-switch></ui-switch>
             </span>
           </div>
         </div>
+
       </div>
     </div>
     <div class="col-xl-3 col-md-6">
-      <div class="card card-body mb-0 border-top-0 border-bottom-0">
+      <div class="card card-body">
         <div class="media">
           <div class="mr-3">
             <a href="#">
@@ -58,16 +87,16 @@
             </a>
           </div>
           <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Contacts</h3>
+            <h3 class="font-weight-semibold mb-0">Target</h3>
             <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
+              <ui-switch></ui-switch>
             </span>
           </div>
         </div>
       </div>
     </div>
     <div class="col-xl-3 col-md-6">
-      <div class="card card-body mb-0 border-top-0 border-bottom-0">
+      <div class="card card-body">
         <div class="media">
           <div class="mr-3">
             <a href="#">
@@ -75,16 +104,16 @@
             </a>
           </div>
           <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Navigation</h3>
+            <h3 class="font-weight-semibold mb-0">iHome</h3>
             <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
+              <ui-switch></ui-switch>
             </span>
           </div>
         </div>
       </div>
     </div>
     <div class="col-xl-3 col-md-6">
-      <div class="card card-body mb-0 border-top-0">
+      <div class="card card-body">
         <div class="media">
           <div class="mr-3">
             <a href="#">
@@ -92,9 +121,9 @@
             </a>
           </div>
           <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Messages</h3>
+            <h3 class="font-weight-semibold mb-0">Pandora</h3>
             <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
+              <ui-switch></ui-switch>
             </span>
           </div>
         </div>

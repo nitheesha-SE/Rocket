@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     console.log("temps")
     if(val === "connect_devices"){
       this.router.navigate([`/sync_devices/${val}`]);
+    } else{
+      this.router.navigate([val]);
     }
 
   }
