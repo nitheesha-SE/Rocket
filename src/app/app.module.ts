@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './modules/headers/header.component';
 import { OrderCompleteComponent } from './modules/orders/order_complete/order.component';
 import { FooterComponent } from './modules/footers/footer.component';
@@ -11,6 +12,7 @@ import { SyncDevicesComponent } from './modules/sync_devices/sync_devices.compon
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { ConnectAppComponent } from './modules/connect_apps/connect_app.component';
 import { VoiceAudioComponent } from './modules/voice_audio/voice_audio.component';
+import { NouisliderModule } from 'ng2-nouislider';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,11 @@ import { VoiceAudioComponent } from './modules/voice_audio/voice_audio.component
     VoiceAudioComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
-    UiSwitchModule
+    UiSwitchModule,
+    NouisliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

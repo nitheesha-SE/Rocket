@@ -15,16 +15,16 @@
 </div>
 <div class="content ">
   <ul class="nav nav-tabs nav-tabs-solid bg-slate border-0 nav-justified rounded">
-    <li class="nav-item"><a href="#colored-rounded-justified-tab1" class="nav-link rounded-left active" data-toggle="tab">Active</a></li>
-    <li class="nav-item"><a href="#colored-rounded-justified-tab2" class="nav-link" data-toggle="tab">Inactive</a></li>
-    <li class="nav-item dropdown">
-        <a href="#colored-rounded-justified-tab2" class="nav-link" data-toggle="tab">Inactive</a>
+    <li class="nav-item"><a class="nav-link rounded-left active" [class.active]="show1" (click)="tab('App', $event, 1)">App</a></li>
+    <li class="nav-item"><a class="nav-link" [class.active]="show2" (click)="tab('Sirius', $event, 2)">Sirius</a></li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="show3" (click)="tab('Radio', $event, 3)">Radio</a>
     </li>
-    <li class="nav-item dropdown">
-        <a href="#colored-rounded-justified-tab2" class="nav-link" data-toggle="tab">Inactive</a>
+    <li class="nav-item">
+      <a class="nav-link rounded-right" [class.active]="show4" (click)="tab('Inactive', $event, 4)"><i class="icon-radio-checked"></i></a>
     </li>
   </ul>
-  <div class="row">
+  <div class="row" *ngIf="show1">
     <div class="col-xl-3 col-md-6">
       <div class="card card-body ">
         <div class="media">
@@ -34,65 +34,15 @@
             </a>
           </div>
           <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">iPhone XS Max</h3>
-            <span class="text-muted">
-              <ui-switch [(ngModel)]="syncIPhone" (change)="onChange($event)"></ui-switch>
+            <h3 class="font-weight-semibold mb-0">Spotify</h3>
+            <span class="text-muted  font-size-sm">
+              <span class="font-weight-bold ">Road Trip</span> is set as your default platlist.
             </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-xl-3 col-md-6">
-      <div class="card card-body mb-0 border-bottom-0">
-        <div class="media">
-          <div class="mr-3">
-            <a href="#">
-              <img src="/assets/images/placeholder.jpg" class="rounded" width="38" height="38" alt="">
-            </a>
-          </div>
-          <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Calendar</h3>
-            <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-md-6">
-      <div class="card card-body mb-0 border-top-0 border-bottom-0">
-        <div class="media">
-          <div class="mr-3">
-            <a href="#">
-              <img src="/assets/images/placeholder.jpg" class="rounded" width="38" height="38" alt="">
-            </a>
-          </div>
-          <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Contacts</h3>
-            <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-md-6">
-      <div class="card card-body mb-0 border-top-0 border-bottom-0">
-        <div class="media">
-          <div class="mr-3">
-            <a href="#">
-              <img src="/assets/images/placeholder.jpg" class="rounded" width="38" height="38" alt="">
-            </a>
-          </div>
-          <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Navigation</h3>
-            <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="col-xl-3 col-md-6">
       <div class="card card-body mb-0 border-top-0">
         <div class="media">
@@ -102,13 +52,152 @@
             </a>
           </div>
           <div class="media-body">
-            <h3 class="font-weight-semibold mb-0">Messages</h3>
-            <span class="text-muted">
-              <ui-switch [disabled]="disabled"></ui-switch>
+            <h3 class="font-weight-semibold mb-0">Add More Apps</h3>
+            <span class="font-weight-bold font-size-sm">
+              More music? Listen to an Audiobook?
             </span>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <ng-container *ngIf="show2">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div class="card-img-actions m-1">
+            <img class="card-img img-fluid" src="/assets/images/placeholder.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="show3">
+    <div class="row">
+      <div class="col">
+        <div class="card bg-green-400">
+          <div class="card-body m-1 text-center">
+            <h3>88.1</h3>
+            <h3>WW1</h3>
+            <i class="position-absolute black icon-check2 icon-3x" style="top:66%;right:0px;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card bg-green-400">
+          <div class="card-body m-1 text-center">
+            <h3>88.2</h3>
+            <h3>WW2</h3>
+            <i class="position-absolute black icon-check2 icon-3x" style="top:66%;right:0px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <div class="card bg-green-400">
+            <div class="card-body m-1 text-center">
+              <h3>88.3</h3>
+              <h3>WW3</h3>
+              <i class="position-absolute black icon-check2 icon-3x" style="top:66%;right:0px;"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card bg-green-400">
+            <div class="card-body m-1 text-center">
+              <h3>88.4</h3>
+              <h3>WW4</h3>
+              <i class="position-absolute black icon-check2 icon-3x" style="top:66%;right:0px;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </ng-container>
+
+  <ng-container *ngIf="show4">
+      <nouislider  [config]="someKeyboardConfig" [(ngModel)]="someKeyboard"></nouislider>
+  </ng-container>
+
 </div>
