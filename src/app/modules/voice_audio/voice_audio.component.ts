@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
+import nouislider from 'nouislider'
 
 @Component({
   selector: 'voice_audio',
@@ -26,22 +27,12 @@ export class VoiceAudioComponent implements OnInit, OnDestroy {
   someKeyboard={}
 
   someKeyboardConfig: any = {
-    behaviour: 'drag',
-    connect: true,
-    start: [0, 5],
-    keyboard: true,  // same as [keyboard]="true"
-    step: 0.1,
-    pageSteps: 10,  // number of page steps, defaults to 10
+    start: 20,
+    orientation: 'vertical',
     range: {
-      min: 0,
-      max: 5
+        'min': 0,
+        'max': 100
     },
-    pips: {
-      mode: 'count',
-      density: 2,
-      values: 6,
-      stepped: true
-    }
   }
 
   onChange(event){
@@ -57,6 +48,24 @@ export class VoiceAudioComponent implements OnInit, OnDestroy {
     this.show4=false;
     this["show" + index] = true;
     console.log(this);
+    if(index === 4){
+      setTimeout(()=>{
+        this.renderSlider();
+      }, 100);
+    }
+  }
+
+  renderSlider(){
+    var slider_vertical_1 = document.getElementById('slider_db');
+    nouislider.create(slider_vertical_1, {
+        start: 20,
+        orientation: 'vertical',
+        range: {
+            'min': 0,
+            'max': 100
+        },
+        direction: $('html').attr('dir') == 'rtl' ? 'rtl' : 'ltr'
+    });
   }
 }
 
