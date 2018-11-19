@@ -17,5 +17,11 @@ export class OrderCompleteComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
   }
+  back() {
+    this.router.navigate(['home']);
+  }
+  complete(){
+    this.router.navigate(['order/confirm']);
+  }
 }
 

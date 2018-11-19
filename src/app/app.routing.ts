@@ -7,16 +7,18 @@ import { ConnectAppComponent } from './modules/connect_apps/connect_app.componen
 import { VoiceAudioComponent } from './modules/voice_audio/voice_audio.component';
 import { ChargingSettingsComponent } from './modules/charge_settings/charge_settings.component';
 import { CimateComfortComponent } from './modules/climate_comfort/climate_comfort.component';
+import { OrderConfirmComponent } from './modules/orders/order_confirmation/order.confirmation';
 
 const routes: Routes = [
   { path: 'order/complete', component: OrderCompleteComponent },
+  { path: 'order/confirm', component: OrderConfirmComponent },
   { path: 'home', component: HomeComponent },
   { path: 'sync_devices/:id', component: SyncDevicesComponent },
   { path: 'connect_apps', component: ConnectAppComponent },
   { path: 'voice_audio', component: VoiceAudioComponent },
   { path: 'charging_settings', component: ChargingSettingsComponent},
   { path: 'climate_comfort', component: CimateComfortComponent},
-  { path: '**', redirectTo: "home" }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

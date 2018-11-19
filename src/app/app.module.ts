@@ -15,6 +15,7 @@ import { VoiceAudioComponent } from './modules/voice_audio/voice_audio.component
 import { NouisliderModule } from 'ng2-nouislider';
 import { ChargingSettingsComponent } from './modules/charge_settings/charge_settings.component';
 import { CimateComfortComponent } from './modules/climate_comfort/climate_comfort.component';
+import { OrderConfirmComponent } from './modules/orders/order_confirmation/order.confirmation';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CimateComfortComponent } from './modules/climate_comfort/climate_comfor
     ConnectAppComponent,
     VoiceAudioComponent,
     ChargingSettingsComponent,
-    CimateComfortComponent
+    CimateComfortComponent,
+    OrderConfirmComponent
   ],
   imports: [
     NgbModule,

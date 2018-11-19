@@ -17,14 +17,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
   }
-  trigger(val){
-    console.log("temps")
-    if(val === "connect_devices"){
+  trigger(val) {
+    if (val === 'connect_devices') {
       this.router.navigate([`/sync_devices/${val}`]);
-    } else{
+    } else {
       this.router.navigate([val]);
     }
-
+  }
+  save() {
+    this.router.navigate(['order/complete']);
   }
 }
 

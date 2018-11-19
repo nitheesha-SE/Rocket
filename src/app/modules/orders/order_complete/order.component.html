@@ -2,7 +2,7 @@
   <div class="page-header-content header-elements-md-inline">
     <div class="page-title d-flex justify-content-between">
       <h4>
-        <i class="icon-arrow-left52 mr-2"></i>
+        <i class="icon-arrow-left52 mr-2" (click)="back()"></i>
       </h4>
       <h4><span class="text-center left-auto">Complete your order</span></h4>
       <h4></h4>
@@ -48,10 +48,11 @@
                 Upload your driver's license
               </label>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <button class="btn btn-success w-100 d-block" (click)="complete()">Complete Order</button>
 </div>
