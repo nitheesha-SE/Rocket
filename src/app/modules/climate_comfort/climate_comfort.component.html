@@ -1,0 +1,32 @@
+<div class="page-header page-header-light">
+  <div class="page-header-content header-elements-md-inline">
+    <div class="page-title d-flex justify-content-between">
+      <h4></h4>
+      <h4><span class="text-center left-auto">My CX727</span></h4>
+      <h4></h4>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h1 class="p-4 text-center mb-0 font-weight-bold">
+    {{heading_title}}
+  </h1>
+</div>
+<div class="content">
+  <ul class="nav nav-tabs nav-tabs-solid bg-slate border-0 nav-justified w-50 rounded mx-auto">
+    <li class="nav-item rounded-left-round">
+      <a class="nav-link active" [class.active]="step1" (click)="tab('step1')">Step 1</a>
+    </li>
+    <li class="nav-item rounded-right-round">
+      <a class="nav-link" [class.active]="step2">Step 2</a>
+    </li>
+  </ul>
+  <ng-container>
+    <div  class="position-relative overflow-hidden" style="height: 60vh">
+
+      <img class="rotate-90 position-absolute"
+        src="/assets/images/top_car.png" style="width: 152%;left: -90px;top:100px;">
+    </div>
+  </ng-container>
+</div>

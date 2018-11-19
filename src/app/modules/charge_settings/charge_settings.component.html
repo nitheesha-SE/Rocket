@@ -1,0 +1,66 @@
+<div class="page-header page-header-light">
+  <div class="page-header-content header-elements-md-inline">
+    <div class="page-title d-flex justify-content-between">
+      <h4></h4>
+      <h4><span class="text-center left-auto">My CX727</span></h4>
+      <h4></h4>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h1 class="p-4 text-center mb-0 font-weight-bold">
+    Charging Settings
+  </h1>
+</div>
+<div class="content ">
+  <div class="row">
+    <div class="col-xl-3 col-md-6">
+      <div class="card card-body ">
+        <div class="media position-relative">
+          <div class="mr-3">
+              <img src="/assets/images/placeholder.jpg" class="rounded position-absolute shadow-lg" style="top: -45px;left:0px;" width="100" height="100" alt="">
+          </div>
+          <div class="media-body" style="margin-left:5.75rem">
+            <h3 class="font-weight-bold mb-0">Smart Charging</h3>
+            <span class="text-muted">
+              <ui-switch  (change)="onChange($event)"></ui-switch>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <div class="card card-body">
+        <div class="media">
+          <div class="media-body">
+            <h3 class="font-weight-semibold mb-0">Destinations</h3>
+            <p>We found several common destinations. Would you like to add o Smart Charging?</p>
+            <span class="text-muted mt-2">
+              <ui-switch></ui-switch>
+            </span>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-body">
+            <h3 class="font-weight-semibold mb-0">Charge Stations</h3>
+            <p>Based on these destination, would you like to learn about charge stations during your trips?</p>
+            <span class="text-muted mt-2">
+              <ui-switch></ui-switch>
+            </span>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-body">
+            <h3 class="font-weight-semibold mb-0">FordWallet, Pay, etc. </h3>
+            <p>What payment method do you prefer for your smart charging needs?</p>
+            <span class="text-muted mt-2">
+              <ui-switch></ui-switch>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

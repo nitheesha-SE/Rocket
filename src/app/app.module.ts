@@ -13,6 +13,8 @@ import { UiSwitchModule } from 'ngx-ui-switch';
 import { ConnectAppComponent } from './modules/connect_apps/connect_app.component';
 import { VoiceAudioComponent } from './modules/voice_audio/voice_audio.component';
 import { NouisliderModule } from 'ng2-nouislider';
+import { ChargingSettingsComponent } from './modules/charge_settings/charge_settings.component';
+import { CimateComfortComponent } from './modules/climate_comfort/climate_comfort.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NouisliderModule } from 'ng2-nouislider';
     HomeComponent,
     SyncDevicesComponent,
     ConnectAppComponent,
-    VoiceAudioComponent
+    VoiceAudioComponent,
+    ChargingSettingsComponent,
+    CimateComfortComponent
   ],
   imports: [
     NgbModule,
