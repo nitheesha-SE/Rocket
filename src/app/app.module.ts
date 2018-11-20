@@ -16,6 +16,8 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { ChargingSettingsComponent } from './modules/charge_settings/charge_settings.component';
 import { CimateComfortComponent } from './modules/climate_comfort/climate_comfort.component';
 import { OrderConfirmComponent } from './modules/orders/order_confirmation/order.confirmation';
+import { LoginComponent } from './modules/login/login';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,16 @@ import { OrderConfirmComponent } from './modules/orders/order_confirmation/order
     VoiceAudioComponent,
     ChargingSettingsComponent,
     CimateComfortComponent,
-    OrderConfirmComponent
+    OrderConfirmComponent,
+    LoginComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
     UiSwitchModule,
-    NouisliderModule
+    NouisliderModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

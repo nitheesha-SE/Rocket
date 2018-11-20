@@ -10,9 +10,9 @@ export class CimateComfortComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router) {
   }
-  heading_title= "Climate"
-  step1=true
-  step2=false
+  heading_title = 'Climate';
+  step1 = true;
+  step2 = false;
 
   ngOnInit(): void {
 
@@ -20,6 +20,11 @@ export class CimateComfortComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
   }
-
+  back() {
+    this.router.navigate(['']);
+  }
+  front() {
+    this.router.navigate(['charging_settings']);
+  }
 }
 

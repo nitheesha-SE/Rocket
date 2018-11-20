@@ -12,6 +12,21 @@ export class VoiceAudioComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router) {
   }
+  disabled = true;
+  show1 = true;
+  show2 = false;
+  show3 = false;
+  show4 = false;
+  someKeyboard = {};
+
+  someKeyboardConfig: any = {
+    start: 20,
+    orientation: 'vertical',
+    range: {
+      'min': 0,
+      'max': 100
+    },
+  };
 
   ngOnInit(): void {
 
@@ -19,53 +34,43 @@ export class VoiceAudioComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
   }
-  disabled = true
-  show1=true;
-  show2=false;
-  show3=false;
-  show4=false;
-  someKeyboard={}
-
-  someKeyboardConfig: any = {
-    start: 20,
-    orientation: 'vertical',
-    range: {
-        'min': 0,
-        'max': 100
-    },
+  onChange(event) {
+    this.disabled = !event;
   }
 
-  onChange(event){
-    this.disabled=!event;
-  }
-
-  tab(trigger, event, index){
+  tab(trigger, event, index) {
     console.log(trigger, event);
 
-    this.show1=false;
-    this.show2=false;
-    this.show3=false;
-    this.show4=false;
-    this["show" + index] = true;
-    console.log(this);
-    if(index === 4){
-      setTimeout(()=>{
+    this.show1 = false;
+    this.show2 = false;
+    this.show3 = false;
+    this.show4 = false;
+    this['show' + index] = true;
+    if (index === 4) {
+      setTimeout(() => {
         this.renderSlider();
       }, 100);
     }
   }
 
-  renderSlider(){
-    var slider_vertical_1 = document.getElementById('slider_db');
-    nouislider.create(slider_vertical_1, {
-        start: 20,
-        orientation: 'vertical',
-        range: {
-            'min': 0,
-            'max': 100
-        },
-        direction: $('html').attr('dir') == 'rtl' ? 'rtl' : 'ltr'
+  renderSlider() {
+    nouislider.create(document.getElementById('slider_db'), {
+      start: 20,
+      orientation: 'vertical',
+      range: {
+        'min': 0,
+        'max': 100
+      },
+      direction: $('html').attr('dir') === 'rtl' ? 'rtl' : 'ltr'
     });
+  }
+
+  front() {
+    this.router.navigate(['']);
+  }
+
+  back() {
+    this.router.navigate(['home']);
   }
 }
 

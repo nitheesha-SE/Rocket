@@ -1,9 +1,15 @@
 <div class="page-header page-header-light">
-  <div class="page-header-content header-elements-md-inline">
+  <div class="page-header-content header-elements-md-inline p-0">
     <div class="page-title d-flex justify-content-between">
-      <h4></h4>
+      <h4>
+        <i class="icon-arrow-left12 ml-1" (click)="back()"></i>
+        Apps
+      </h4>
       <h4><span class="text-center left-auto">My CX727</span></h4>
-      <h4></h4>
+      <h4>
+        Comfort
+        <i class="icon-arrow-right13 mr-1" (click)="front()"></i>
+      </h4>
     </div>
   </div>
 </div>
@@ -13,7 +19,7 @@
     Audio
   </h1>
 </div>
-<div class="content ">
+<div class="content">
   <ul class="nav nav-tabs nav-tabs-solid bg-slate border-0 nav-justified rounded">
     <li class="nav-item"><a class="nav-link rounded-left active" [class.active]="show1" (click)="tab('App', $event, 1)">App</a></li>
     <li class="nav-item"><a class="nav-link" [class.active]="show2" (click)="tab('Sirius', $event, 2)">Sirius</a></li>

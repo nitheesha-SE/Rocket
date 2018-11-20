@@ -10,6 +10,7 @@ export class ConnectAppComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router) {
   }
+  show = false;
 
   ngOnInit(): void {
 
@@ -17,10 +18,14 @@ export class ConnectAppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
   }
-  show = false
-
-  onChange(event){
+  onChange(event) {
     this.show = event;
+  }
+  back() {
+    this.router.navigate(['sync_devices']);
+  }
+  front() {
+    this.router.navigate(['voice_audio']);
   }
 }
 

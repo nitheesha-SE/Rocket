@@ -10,6 +10,8 @@ export class SyncDevicesComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router) {
   }
+  syncIPhone = false;
+  disabled = true;
 
   ngOnInit(): void {
 
@@ -17,11 +19,14 @@ export class SyncDevicesComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
   }
-  syncIPhone = false
-  disabled = true
-
-  onChange(event){
-    this.disabled=!event;
+  onChange(event) {
+    this.disabled = !event;
+  }
+  back() {
+    this.router.navigate(['home']);
+  }
+  front() {
+    this.router.navigate(['connect_apps']);
   }
 }
 
