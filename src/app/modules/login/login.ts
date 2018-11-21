@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'login',
   templateUrl: './login.html',
@@ -8,17 +9,38 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private formBuilder: FormBuilder
+    ) {
   }
+  loginForm: FormGroup;
 
   ngOnInit(): void {
+    this.loginForm = new FormGroup({
+      'username': new FormControl('', [
+        Validators.required,
+        // Validators.email,
+      ]),
+      'password': new FormControl('', Validators.required)
+    });
 
   }
   ngOnDestroy(): void {
 
   }
-  login() {
-    this.router.navigate(['home']);
+  onSubmit() {
+    this.http.post<any>(`/api/signin`, {
+      usernameOrEmail : this.loginForm.controls.username.value,
+      password: this.loginForm.controls.password.value
+    })
+      .subscribe(
+        data => {
+          this.router.navigate(['home']);
+        },
+        error => {
+        });
   }
 }
 

@@ -18,6 +18,7 @@ import { CimateComfortComponent } from './modules/climate_comfort/climate_comfor
 import { OrderConfirmComponent } from './modules/orders/order_confirmation/order.confirmation';
 import { LoginComponent } from './modules/login/login';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     UiSwitchModule,
     NouisliderModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
