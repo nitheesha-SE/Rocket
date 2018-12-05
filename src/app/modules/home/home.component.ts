@@ -15,9 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.getFoods().subscribe((data) => {
-
-    });
+   
   }
   ngOnDestroy(): void {
 
@@ -33,8 +31,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.router.navigate(['order/complete']);
   }
 
-  getFoods() {
-    return this.http.get('/api/info').pipe();
-  }
+  
 }
 

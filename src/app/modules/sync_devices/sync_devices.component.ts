@@ -22,11 +22,12 @@ export class SyncDevicesComponent implements OnInit, OnDestroy {
   onChange(event) {
     this.disabled = !event;
   }
+  
   back() {
-    this.router.navigate(['home']);
+    this.router.navigate(['connect_apps']);
   }
   front() {
-    this.router.navigate(['connect_apps']);
+    this.router.navigate(['charging_settings']);
   }
 }
 

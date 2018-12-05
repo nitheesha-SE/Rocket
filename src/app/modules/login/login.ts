@@ -30,17 +30,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
   }
-  onSubmit() {
-    this.http.post<any>(`/api/signin`, {
-      usernameOrEmail : this.loginForm.controls.username.value,
-      password: this.loginForm.controls.password.value
-    })
-      .subscribe(
-        data => {
-          this.router.navigate(['home']);
-        },
-        error => {
-        });
-  }
+
 }
 

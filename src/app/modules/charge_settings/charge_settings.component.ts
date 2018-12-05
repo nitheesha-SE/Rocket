@@ -22,5 +22,9 @@ export class ChargingSettingsComponent implements OnInit, OnDestroy {
   onChange(event){
     this.show = event;
   }
+  back() {
+    this.router.navigate(['connect_apps']);
+  }
+  
 }
 

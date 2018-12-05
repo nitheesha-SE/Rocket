@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'charging_settings', component: ChargingSettingsComponent},
   { path: 'climate_comfort', component: CimateComfortComponent},
   { path: 'login', component: LoginComponent},
-  { path: '**', redirectTo: 'login' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

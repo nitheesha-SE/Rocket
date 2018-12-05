@@ -4,7 +4,7 @@
       <h4>
         <i class="icon-arrow-left52 mr-2" (click)="back()"></i>
       </h4>
-      <h4><span class="text-center left-auto">Complete your order</span></h4>
+      <h4><span class="text-center left-auto">Confirmation</span></h4>
       <h4></h4>
     </div>
   </div>
@@ -12,41 +12,37 @@
 
 <div class="p-4 text-center">
   <h1 class="mb-0">
-    Complete these steps in order to receive your CX727
+    You're all set!
   </h1>
-</div>
+  <h5>
+    Here's a review of your settings you may edit at any time
+  </h5>
 <div class="content">
   <div class="card">
     <div class="card-body">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="p1">
-              <label class="custom-control-label" for="p1">
-                Schedule Home Changer Installation
-              </label>
+            <div class = "text-center"  (click) = "apps()">
+              <!-- <label class="custom-control-label" for="p1"> -->
+                Favorite App 
+                <i class="black icon-check2 icon-3x" ></i>
+              <!-- </label> -->
             </div>
 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="p2">
-              <label class="custom-control-label" for="p2">
-                Schedule Your Delivery
-              </label>
+              <div class="text-center" (click) = "sync_devices()">
+              <!-- <label class="custom-control-label" for="p1"> -->
+                Sync Devices 
+                <i class="black icon-check2 icon-3x" ></i>
+              <!-- </label> -->
             </div>
 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="p3">
-              <label class="custom-control-label" for="p3">
-                Complete your finanace application
-              </label>
-            </div>
-
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="p3">
-              <label class="custom-control-label" for="p3">
-                Upload your driver's license
-              </label>
+            <div class="text-center"  (click) = "charging()">
+              <!-- <input type="checkbox" class="custom-control-input" id="p3"> -->
+              <!-- <label class="custom-control-label" for="p3"> -->
+                Charging
+                <i class=" black icon-check2 icon-3x" ></i>
+              <!-- </label> -->
             </div>
           </div>
         </div>

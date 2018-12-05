@@ -22,10 +22,11 @@ export class ConnectAppComponent implements OnInit, OnDestroy {
     this.show = event;
   }
   back() {
-    this.router.navigate(['sync_devices']);
+    this.router.navigate(['home']);
   }
   front() {
-    this.router.navigate(['voice_audio']);
+    this.router.navigate(['sync_devices']);
   }
+  
 }
 

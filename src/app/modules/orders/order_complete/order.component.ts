@@ -23,5 +23,14 @@ export class OrderCompleteComponent implements OnInit, OnDestroy {
   complete(){
     this.router.navigate(['order/confirm']);
   }
+  sync_devices() {
+    this.router.navigate([`sync_devices`]);
+  }
+  charging() {
+    this.router.navigate(['charging_settings']);
+  }
+  apps() {
+    this.router.navigate(['connect_apps']);
+  }
 }
 
